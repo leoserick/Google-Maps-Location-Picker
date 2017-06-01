@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            #map{ 
+                width:100%; 
+                height: 480px; 
+            }
+            body {
+                display: flex;
+                max-width: 1232px;
+                margin: 0 auto;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .half-container {
+                margin-right: 32px;
+            }
+        </style>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+        <title>Picker de tu ubicación</title>
+    </head>
+    <body>
+        <div class="half-container">
+            <h1>Location picker </h1>
+            <p>Da click en un lugar del mapa para definir una ubicación. Para mejor presición puedes arrastrar el marcador.</p>
+            <!--Contenedor del mapa-->
+            <div id="map"></div>
+        </div>
+        <div class="half-container">
+            <!--El formulario donde se imprimen las coordenadas al dar click al mapa -->
+            <h2>Las coordenadas</h2>
+            <form method="post">
+                <input type="text" id="lat" readonly="yes"><br>
+                <input type="text" id="lng" readonly="yes">
+            </form>
+        </div>
+        <script type="text/javascript" src="map.js"></script>
+    </body>
+</html>
